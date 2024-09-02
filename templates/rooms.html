@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{%block title%}
+Rooms
+{%endblock%}
+{% block content%}
+<div class="container text-center bg-light ">
+    {% for d in ro%}
+    <div class ="card text-center bg-light" my=3  mx= 3 style="width:18 rem; display:inline-block">
+
+        <img src="{{d.room_img.url}}" class="card_img_top" alt="error">
+        <div class="card-body">
+            <h4 class="card-title">{{d.room_type}}</h4>
+            <h3 class ="card-text">{{d.room_rate}}</h3>
+
+        </div>
+    </div>
+</div>
+{%endfor%}
+
+
+{%endblock%}
